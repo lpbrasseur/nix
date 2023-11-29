@@ -1,9 +1,10 @@
 { pkgs, ...}:
 
-with homeConfiguration; {
-  programs.helix = {
+{
+  environment.systemPackages = [ pkgs.helix ];
+
+  home-manager.users.leopold.programs.helix = {
     enable = true;
-    package = pkgs.helix;
 
     settings = {
       theme = "gruvbox";
