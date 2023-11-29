@@ -1,5 +1,5 @@
 {
-    imports = [
-        ./social.nix
-    ];
+  imports = [
+    ./social.nix
+  ];
 }

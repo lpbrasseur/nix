@@ -1,10 +1,10 @@
 {
-    imports = [
-        ./users.nix
-        ./nixos.nix
-        ./games
-        ./base
-        ./social
-        ./dev
-    ];
+  imports = [
+    ./users.nix
+    ./nixos.nix
+    ./games
+    ./base
+    ./social
+    ./dev
+  ];
 }

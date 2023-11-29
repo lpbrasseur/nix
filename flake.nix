@@ -12,13 +12,7 @@
 
   };
 
-  outputs = inputs @ {
-    nixpkgs,
-    home-manager,
-    ...
-  }:
-
-  {
+  outputs = inputs @ { nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       opossum = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -26,7 +20,7 @@
           ./modules # declare des options
           ./opossum # il active les options (custom + standard)
         ];
-        specialArgs = {};
+        specialArgs = { };
       };
     };
   };

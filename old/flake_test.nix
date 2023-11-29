@@ -133,7 +133,7 @@
     overlays = { exampleOverlay = self.overlay; };
 
     # Default module, for use in dependent flakes. Deprecated, use nixosModules.default instead.
-    nixosModule = { config, ... }: { options = {}; config = {}; };
+    nixosModule = { config, ... }: { options = { }; config = { }; };
 
     # Same idea as nixosModule but a list or attrset of them.
     nixosModules = { exampleModule = self.nixosModule; };
@@ -142,7 +142,7 @@
     # nixosConfigurations."<hostname>".config.system.build.toplevel must be a derivation
     nixosConfigurations.example = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [{boot.isContainer=true;}] ;
+      modules = [{ boot.isContainer = true; }];
     };
 
     # Utilized by `nix develop`

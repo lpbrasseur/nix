@@ -1,6 +1,6 @@
 {
-    imports = [
-        ./base.nix
-        ./helix
-    ];
+  imports = [
+    ./base.nix
+    ./helix
+  ];
 }

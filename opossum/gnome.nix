@@ -14,5 +14,4 @@
     core-utilities.enable = false;
     tracker-miners.enable = true;
   };
-
 }

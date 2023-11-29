@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
 {
-    environment.systemPackages = with pkgs; [
-        nil
-        nixpkgs-fmt
-    ];
+  environment.systemPackages = with pkgs; [
+    nil
+    nixpkgs-fmt
+  ];
 }
