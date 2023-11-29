@@ -19,6 +19,7 @@
         modules = [
           ./modules # declare des options
           ./opossum # il active les options (custom + standard)
+          home-manager.nixosModules.home-manager
         ];
         specialArgs = { };
       };
