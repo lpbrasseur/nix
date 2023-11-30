@@ -6,4 +6,6 @@
     description = "leopold";
     extraGroups = [ "networkmanager" "wheel" ];
   };
+
+  home-manager.users.leopold.home.stateVersion = "23.05";
 }

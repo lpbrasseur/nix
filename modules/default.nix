@@ -4,7 +4,7 @@
     ./nixos.nix
     ./games
     ./base
-    ./social
+    ./social.nix
     ./dev
   ];
 }

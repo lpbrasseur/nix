@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  python' = with pkgs.python3.withPackages; [
+  python' = pkgs.python3.withPackages (p: with p; [
     mypy
     black
     pandas
@@ -10,7 +10,7 @@ let
     matplotlib
     python-lsp-server
     ipython-sql
-  ];
+  ]);
 
   ocaml' = with pkgs.ocamlPackages; [
     findlib
