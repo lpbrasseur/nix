@@ -41,6 +41,7 @@ in
   users.users.leopold = {
     packages = with pkgs; [
       vscode
+      lapce
       python'
       texlive.combined.scheme-full
       git

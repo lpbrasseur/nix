@@ -4,5 +4,9 @@ language-servers = ["ruff-lsp"]
 formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = true
 
+[[language]]
+name = "nix"
+formatter = { command = "nixpkgs-fmt" }
+
 [language-server.ruff-lsp]
 command = "ruff-lsp"

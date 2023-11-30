@@ -10,6 +10,8 @@
     wget
     htop
 
+    blackbox-terminal
+
     thunderbird
     keepassxc
     seafile-client
