@@ -37,12 +37,17 @@
     gnome-contacts
     gnome-font-viewer
     gnome-logs
-    gnome-maps
-    gnome-music
+    #gnome-maps
+    #gnome-music
     gnome-screenshot
-    gnome-system-monitor
+    #gnome-system-monitor
     gnome-weather
-    gnome-disk-utility
+    #gnome-disk-utility
     pkgs.gnome-connections
   ];
+  
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.appindicator
+  ];
+  
 }
