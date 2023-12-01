@@ -7,6 +7,7 @@ auto-format = true
 [[language]]
 name = "nix"
 formatter = { command = "nixpkgs-fmt" }
+auto-format = true
 
 [language-server.ruff-lsp]
 command = "ruff-lsp"

@@ -45,10 +45,4 @@
     gnome-disk-utility
     pkgs.gnome-connections
   ];
-
-  environment.systemPackages = [
-    pkgs.gnome-builder
-  ];
-
-
 }

@@ -35,6 +35,13 @@ let
     typst-lsp
     typst-fmt
   ];
+  
+  rust' = with pkgs; [
+    rustc
+    rustfmt
+    rust-analyzer
+    cargo
+  ];
 in
 
 {
@@ -47,6 +54,7 @@ in
       git
     ] ++ ocaml'
     ++ c'
-    ++ typst';
+    ++ typst'
+    ++ rust';
   };
 }
