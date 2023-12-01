@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   python' = pkgs.python3.withPackages (p: with p; [
@@ -42,6 +42,12 @@ let
     rust-analyzer
     cargo
   ];
+  
+  nix' = with pkgs; [
+    nil
+    nixpkgs-fmt
+  ];
+  
 in
 
 {
@@ -55,6 +61,7 @@ in
     ] ++ ocaml'
     ++ c'
     ++ typst'
-    ++ rust';
+    ++ rust'
+    ++ nix';
   };
 }

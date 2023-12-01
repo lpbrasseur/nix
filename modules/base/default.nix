@@ -11,6 +11,8 @@
     htop
 
     blackbox-terminal
+    
+    ubuntu_font_family
 
     thunderbird
     keepassxc
