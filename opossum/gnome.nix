@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   services.xserver.enable = true;
@@ -27,7 +27,7 @@
     #evince # document viewer
     file-roller # archive manager
     geary # email client
-    seahorse # password manager
+    #seahorse # password manager
 
     # these should be self explanatory
     gnome-calculator
