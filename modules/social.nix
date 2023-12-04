@@ -6,6 +6,8 @@
       telegram-desktop
       discord
       mumble
+      fractal
+      signal-desktop
     ];
   };
 }

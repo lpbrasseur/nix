@@ -19,7 +19,7 @@
           ./opossum # il active les options (custom + standard)
           home-manager.nixosModules.home-manager
         ];
-        specialArgs = { };
+        specialArgs = { inherit inputs; };
       };
     };
   };

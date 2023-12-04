@@ -12,6 +12,7 @@
 
   services.gnome = {
     core-utilities.enable = true;
+    core-os-services.enable = true;
     tracker-miners.enable = true;
   };
 
@@ -25,21 +26,21 @@
     #totem # video player
     yelp # help viewer
     #evince # document viewer
-    file-roller # archive manager
+    #file-roller # archive manager
     geary # email client
     #seahorse # password manager
 
     # these should be self explanatory
-    gnome-calculator
-    gnome-calendar
+    #gnome-calculator
+    #gnome-calendar
     gnome-characters
-    gnome-clocks
+    #gnome-clocks
     gnome-contacts
     gnome-font-viewer
     gnome-logs
     #gnome-maps
     #gnome-music
-    gnome-screenshot
+    #gnome-screenshot
     #gnome-system-monitor
     gnome-weather
     #gnome-disk-utility
@@ -47,7 +48,13 @@
   ];
   
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.appindicator
+    gnomeExtensions.tray-icons-reloaded
+    #Wayland screenshare
+    #xdg-desktop-portal-gnome #inutile et ralentit le pc ?
+    xdg-desktop-portal
   ];
+  
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  
   
 }
