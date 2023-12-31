@@ -37,7 +37,8 @@ let
   ];
   
   rust' = with pkgs; [
-    (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
+    #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
+    (rust-bin.stable.latest.complete)
   ];
   
   nix' = with pkgs; [
