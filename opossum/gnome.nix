@@ -49,6 +49,7 @@
   
   environment.systemPackages = with pkgs; [
     gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.vitals
     #Wayland screenshare
     #xdg-desktop-portal-gnome #inutile et ralentit le pc ?
     xdg-desktop-portal

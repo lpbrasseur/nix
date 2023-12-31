@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs,... }:
 
 let
   python' = pkgs.python3.withPackages (p: with p; [
@@ -37,10 +37,7 @@ let
   ];
   
   rust' = with pkgs; [
-    rustc
-    rustfmt
-    rust-analyzer
-    cargo
+    (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
   ];
   
   nix' = with pkgs; [
@@ -64,4 +61,7 @@ in
     ++ rust'
     ++ nix';
   };
+  
+  nixpkgs.overlays = [ inputs.rust-overlay.overlays.default ];
+  
 }

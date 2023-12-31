@@ -8,16 +8,19 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    rust-overlay.url = "github:oxalica/rust-overlay";
+    
   };
 
-  outputs = inputs @ { nixpkgs, home-manager, ... }: {
+  outputs = inputs @ { nixpkgs, home-manager, rust-overlay,... }: {
     nixosConfigurations = {
       opossum = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./modules # declare des options
           ./opossum # il active les options (custom + standard)
-          home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager # hm
         ];
         specialArgs = { inherit inputs; };
       };
